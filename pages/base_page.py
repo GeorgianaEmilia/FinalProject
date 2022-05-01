@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from browser import Browser
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,7 +9,7 @@ import unittest
 # si nu sunt specifice neaparat unei singure pagini
 # apoi paginile vor mosteni aceasta pagina => ca sa nu scrie de n ori wait_for_elem and other helper methods
 class BasePage(Browser):
-
+    LOGOUT = (By.XPATH, '//i[contains(text(),"Logout")]')
     def wait_for_elem(self, by, selector):
         WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((by, selector)))
 

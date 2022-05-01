@@ -1,3 +1,4 @@
+@finalproject
 @regressionTest
 Feature: Herokuapp login page tests
 

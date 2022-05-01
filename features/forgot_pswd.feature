@@ -1,3 +1,4 @@
+@finalproject
 Feature: Jules forgot password tests
 
     #se ruleaza inainte de fiecare test(in general given urile)

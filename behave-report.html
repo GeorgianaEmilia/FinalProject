@@ -115,11 +115,11 @@ function Collapsible_expandAllFailed()
         </div>
         <div id="summary">
           <p id="totals">
-            <p id="feature_totals">Features: skipped: 1, passed: 1</p>
-            <p id="scenario_totals">Scenarios: skipped: 2, passed: 12</p>
-            <p id="step_totals">Steps: skipped: 3, untested: 3, passed: 23</p>
+            <p id="feature_totals">Features: passed: 2</p>
+            <p id="scenario_totals">Scenarios: passed: 14</p>
+            <p id="step_totals">Steps: passed: 26, untested: 3</p>
           </p>
-          <p id="duration">Finished in 60.1 seconds</p>
+          <p id="duration">Finished in 67.4 seconds</p>
           <div id="expand-collapse">
             <a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a>
             <span> | </span>
@@ -130,6 +130,7 @@ function Collapsible_expandAllFailed()
         </div>
       </div>
       <div class="feature">
+        <span class="tag">@finalproject</span>
         <h2>
           <span class="val">Feature: Jules forgot password tests</span>
         </h2>
@@ -143,34 +144,181 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/forgot_pswd.feature:8</span>
+        <span class="scenario_file">features/forgot_pswd.feature:9</span>
         <span class="tag">@jules1</span>
         <h3 onclick="Collapsible_toggle('scenario_0')">
           <span class="val">Scenario: Wrong email validation message</span>
         </h3>
-        <ol class="scenario_steps" id="scenario_0"/>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/forgot_pswd.feature:21</span>
-        <span class="tag">@jules</span>
-        <h3 onclick="Collapsible_toggle('scenario_1')">
-          <span class="val">Scenario Outline: Wrong email validation message with table data -- @1.1 </span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_1"/>
+        <ol class="scenario_steps" id="scenario_0">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">sign_in: I am a user on Jules sign in page</span>
+              <small class="step_duration">(2.512s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:8</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">sign_in: I click forgot password link</span>
+              <small class="step_duration">(0.443s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:24</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>forgot_pswd: I set my email &quot;</span>
+                <b>abcd</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(1.107s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">forgot_pswd: I verify that email validation is correct</span>
+              <small class="step_duration">(0.027s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:7</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
         <span/>
       </div>
       <div class="scenario">
         <span class="scenario_file">features/forgot_pswd.feature:22</span>
         <span class="tag">@jules</span>
+        <h3 onclick="Collapsible_toggle('scenario_1')">
+          <span class="val">Scenario Outline: Wrong email validation message with table data -- @1.1 </span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_1">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">sign_in: I am a user on Jules sign in page</span>
+              <small class="step_duration">(0.364s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:8</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">sign_in: I click forgot password link</span>
+              <small class="step_duration">(0.264s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:24</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>forgot_pswd: I set my email &quot;</span>
+                <b>abcdfasafa</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(1.136s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">forgot_pswd: I verify that email validation is correct</span>
+              <small class="step_duration">(0.024s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:7</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/forgot_pswd.feature:23</span>
+        <span class="tag">@jules</span>
         <h3 onclick="Collapsible_toggle('scenario_2')">
           <span class="val">Scenario Outline: Wrong email validation message with table data -- @1.2 </span>
         </h3>
-        <ol class="scenario_steps" id="scenario_2"/>
+        <ol class="scenario_steps" id="scenario_2">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">sign_in: I am a user on Jules sign in page</span>
+              <small class="step_duration">(0.341s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:8</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">sign_in: I click forgot password link</span>
+              <small class="step_duration">(0.224s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/sign_in_steps.py:24</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>forgot_pswd: I set my email &quot;</span>
+                <b>gggdd.rdam</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(1.136s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">forgot_pswd: I verify that email validation is correct</span>
+              <small class="step_duration">(0.024s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/forgot_pswd_steps.py:7</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
         <span/>
       </div>
       <div class="feature">
-        <span class="tag">@regressionTest</span>
+        <span class="tag">@finalproject, @regressionTest</span>
         <h2>
           <span class="val">Feature: Herokuapp login page tests</span>
         </h2>
@@ -184,7 +332,7 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:9</span>
+        <span class="scenario_file">features/login_page.feature:10</span>
         <span class="tag">@herokuapp</span>
         <h3 onclick="Collapsible_toggle('scenario_3')">
           <span class="val">Scenario: Error message login page</span>
@@ -194,7 +342,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Given </span>
               <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(1.961s)</small>
+              <small class="step_duration">(1.934s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:3</span>
@@ -209,7 +357,7 @@ function Collapsible_expandAllFailed()
                 <b>bubu</b>
                 <span>&quot;</span>
               </span>
-              <small class="step_duration">(2.080s)</small>
+              <small class="step_duration">(2.081s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:7</span>
@@ -224,7 +372,7 @@ function Collapsible_expandAllFailed()
                 <b>password</b>
                 <span>&quot;</span>
               </span>
-              <small class="step_duration">(0.075s)</small>
+              <small class="step_duration">(0.074s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:11</span>
@@ -235,7 +383,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">When </span>
               <span class="step val">login: I click login button</span>
-              <small class="step_duration">(0.431s)</small>
+              <small class="step_duration">(0.451s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:15</span>
@@ -250,7 +398,7 @@ function Collapsible_expandAllFailed()
                 <b>Your username is invalid!</b>
                 <span>&quot;</span>
               </span>
-              <small class="step_duration">(0.035s)</small>
+              <small class="step_duration">(0.033s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:27</span>
@@ -261,172 +409,12 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:17</span>
+        <span class="scenario_file">features/login_page.feature:18</span>
         <span class="tag">@herokuapp0</span>
         <h3 onclick="Collapsible_toggle('scenario_4')">
           <span class="val">Scenario: Check the new url</span>
         </h3>
         <ol class="scenario_steps" id="scenario_4">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.194s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">login: I check if the new url is correct</span>
-              <small class="step_duration">(0.007s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:23</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:22</span>
-        <span class="tag">@herokuapp1</span>
-        <h3 onclick="Collapsible_toggle('scenario_5')">
-          <span class="val">Scenario: Login element is displayed</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_5">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.194s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">login: I will see the login element is displayed</span>
-              <small class="step_duration">(3.023s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:31</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:27</span>
-        <span class="tag">@herokuapp2</span>
-        <h3 onclick="Collapsible_toggle('scenario_6')">
-          <span class="val">Scenario: Page title is correct</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_6">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.204s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">login: I will see if the title page is correct</span>
-              <small class="step_duration">(0.009s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:35</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:32</span>
-        <span class="tag">@herokuapp3</span>
-        <h3 onclick="Collapsible_toggle('scenario_7')">
-          <span class="val">Scenario: The text on the element is correct</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_7">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.218s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">login: I will see if the element on the text is correct</span>
-              <small class="step_duration">(0.030s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:39</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:37</span>
-        <span class="tag">@herokuapp4</span>
-        <h3 onclick="Collapsible_toggle('scenario_8')">
-          <span class="val">Scenario: The href attribute link for Elemental Selenium is correct</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_8">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.197s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">login: I check that the href attribute of the link Elemental Selenium is correct</span>
-              <small class="step_duration">(0.031s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:43</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:42</span>
-        <span class="tag">@herokuapp5</span>
-        <h3 onclick="Collapsible_toggle('scenario_9')">
-          <span class="val">Scenario: The error message is displayed</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_9">
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">Given </span>
@@ -441,8 +429,168 @@ function Collapsible_expandAllFailed()
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">Then </span>
+              <span class="step val">login: I check if the new url is correct</span>
+              <small class="step_duration">(0.006s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:23</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:23</span>
+        <span class="tag">@herokuapp1</span>
+        <h3 onclick="Collapsible_toggle('scenario_5')">
+          <span class="val">Scenario: Login element is displayed</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_5">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.188s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">login: I will see the login element is displayed</span>
+              <small class="step_duration">(3.015s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:31</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:28</span>
+        <span class="tag">@herokuapp2</span>
+        <h3 onclick="Collapsible_toggle('scenario_6')">
+          <span class="val">Scenario: Page title is correct</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_6">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.195s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">login: I will see if the title page is correct</span>
+              <small class="step_duration">(0.010s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:35</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:33</span>
+        <span class="tag">@herokuapp3</span>
+        <h3 onclick="Collapsible_toggle('scenario_7')">
+          <span class="val">Scenario: The text on the element is correct</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_7">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.192s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">login: I will see if the element on the text is correct</span>
+              <small class="step_duration">(0.028s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:38</span>
+        <span class="tag">@herokuapp4</span>
+        <h3 onclick="Collapsible_toggle('scenario_8')">
+          <span class="val">Scenario: The href attribute link for Elemental Selenium is correct</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_8">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.193s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">login: I check that the href attribute of the link Elemental Selenium is correct</span>
+              <small class="step_duration">(0.027s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:43</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:43</span>
+        <span class="tag">@herokuapp5</span>
+        <h3 onclick="Collapsible_toggle('scenario_9')">
+          <span class="val">Scenario: The error message is displayed</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_9">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.189s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
               <span class="step val">login: I check if the error message is displayed</span>
-              <small class="step_duration">(0.444s)</small>
+              <small class="step_duration">(0.423s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:47</span>
@@ -453,7 +601,7 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:47</span>
+        <span class="scenario_file">features/login_page.feature:48</span>
         <span class="tag">@herokuapp6</span>
         <h3 onclick="Collapsible_toggle('scenario_10')">
           <span class="val">Scenario: The error message is not displayed</span>
@@ -463,7 +611,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Given </span>
               <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.203s)</small>
+              <small class="step_duration">(0.187s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:3</span>
@@ -474,7 +622,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">When </span>
               <span class="step val">login: I click login button</span>
-              <small class="step_duration">(0.408s)</small>
+              <small class="step_duration">(0.383s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:15</span>
@@ -485,7 +633,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Then </span>
               <span class="step val">login: I check if the error message is not displayed</span>
-              <small class="step_duration">(0.076s)</small>
+              <small class="step_duration">(0.067s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:51</span>
@@ -496,7 +644,7 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:53</span>
+        <span class="scenario_file">features/login_page.feature:54</span>
         <span class="tag">@herokuapp7</span>
         <h3 onclick="Collapsible_toggle('scenario_11')">
           <span class="val">Scenario: The labels message are correct</span>
@@ -506,7 +654,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Given </span>
               <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.199s)</small>
+              <small class="step_duration">(0.196s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:3</span>
@@ -517,7 +665,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Then </span>
               <span class="step val">login: I check if the message on the labels contain the correct message(username and password)</span>
-              <small class="step_duration">(0.043s)</small>
+              <small class="step_duration">(0.040s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:55</span>
@@ -528,7 +676,7 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:60</span>
+        <span class="scenario_file">features/login_page.feature:61</span>
         <span class="tag">@herokuapp8</span>
         <h3 onclick="Collapsible_toggle('scenario_12')">
           <span class="val">Scenario: Validate the correct username and password</span>
@@ -538,7 +686,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Given </span>
               <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.215s)</small>
+              <small class="step_duration">(0.195s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:3</span>
@@ -553,84 +701,7 @@ function Collapsible_expandAllFailed()
                 <b>tomsmith</b>
                 <span>&quot;</span>
               </span>
-              <small class="step_duration">(2.091s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:7</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">When </span>
-              <span class="step val">
-                <span>login: I set my pass &quot;</span>
-                <b>SuperSecretPassword!</b>
-                <span>&quot;</span>
-              </span>
-              <small class="step_duration">(0.083s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:11</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">When </span>
-              <span class="step val">login: I click login button</span>
-              <small class="step_duration">(0.430s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:15</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Then </span>
-              <span class="step val">
-                <span>login: I check if the attribute flash success is displayed and the message on the attribute contain the text &quot;</span>
-                <b>secure area</b>
-                <span>&quot;</span>
-              </span>
-              <small class="step_duration">(0.064s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:59</span>
-            </div>
-            <span class="embed"/>
-          </li>
-        </ol>
-        <span/>
-      </div>
-      <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:68</span>
-        <span class="tag">@herokuapp9</span>
-        <h3 onclick="Collapsible_toggle('scenario_13')">
-          <span class="val">Scenario: After logout I check the current URL</span>
-        </h3>
-        <ol class="scenario_steps" id="scenario_13">
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.219s)</small>
-            </div>
-            <div class="step_file">
-              <span>steps/login_steps.py:3</span>
-            </div>
-            <span class="embed"/>
-          </li>
-          <li class="step passed">
-            <div class="step_name">
-              <span class="keyword">Given </span>
-              <span class="step val">
-                <span>login: I set my email &quot;</span>
-                <b>tomsmith</b>
-                <span>&quot;</span>
-              </span>
-              <small class="step_duration">(2.068s)</small>
+              <small class="step_duration">(2.077s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:7</span>
@@ -656,7 +727,84 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">When </span>
               <span class="step val">login: I click login button</span>
-              <small class="step_duration">(0.403s)</small>
+              <small class="step_duration">(0.409s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>login: I check if the attribute flash success is displayed and the message on the attribute contain the text &quot;</span>
+                <b>secure area</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(0.059s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:59</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/login_page.feature:69</span>
+        <span class="tag">@herokuapp9</span>
+        <h3 onclick="Collapsible_toggle('scenario_13')">
+          <span class="val">Scenario: After logout I check the current URL</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_13">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">login: I am a user on Herokuapp in page</span>
+              <small class="step_duration">(0.252s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:3</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">
+                <span>login: I set my email &quot;</span>
+                <b>tomsmith</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(2.076s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:7</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>login: I set my pass &quot;</span>
+                <b>SuperSecretPassword!</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(0.079s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/login_steps.py:11</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">login: I click login button</span>
+              <small class="step_duration">(0.414s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:15</span>
@@ -667,7 +815,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">When </span>
               <span class="step val">login: I click logout button</span>
-              <small class="step_duration">(0.408s)</small>
+              <small class="step_duration">(0.429s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:19</span>
@@ -682,7 +830,7 @@ function Collapsible_expandAllFailed()
                 <b>https://the-internet.herokuapp.com/login</b>
                 <span>&quot;</span>
               </span>
-              <small class="step_duration">(0.020s)</small>
+              <small class="step_duration">(0.015s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:63</span>
@@ -693,7 +841,7 @@ function Collapsible_expandAllFailed()
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login_page.feature:80</span>
+        <span class="scenario_file">features/login_page.feature:81</span>
         <span class="tag">@herokuapp10</span>
         <h3 onclick="Collapsible_toggle('scenario_14')">
           <span class="val">Scenario: Brute Force password hacking</span>
@@ -703,7 +851,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Given </span>
               <span class="step val">login: I am a user on Herokuapp in page</span>
-              <small class="step_duration">(0.209s)</small>
+              <small class="step_duration">(0.191s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:3</span>
@@ -714,7 +862,7 @@ function Collapsible_expandAllFailed()
             <div class="step_name">
               <span class="keyword">Then </span>
               <span class="step val">login: I check the entire combination of passwords</span>
-              <small class="step_duration">(43.542s)</small>
+              <small class="step_duration">(43.466s)</small>
             </div>
             <div class="step_file">
               <span>steps/login_steps.py:67</span>

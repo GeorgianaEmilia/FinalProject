@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from pages.base_page import BasePage
 class Secure_page(BasePage):
-    LOGOUT_BTN = (By.XPATH, '//*[@id="content"]/div/a/i')
     SUCCESSFULLY_MESSAGE=(By.ID,'flash')
 
     def navigate_to_secure_page(self):
@@ -21,4 +20,4 @@ class Secure_page(BasePage):
         self.assertTrue(len(actual) == 1, 'Textul nu este displayed')
 
     def click_logout(self):
-        self.driver.find_element(*self.LOGOUT_BTN).click()
+        self.driver.find_element(*self.LOGOUT).click()

@@ -31,7 +31,7 @@ As a new user, I want to register by creating a username and password so that th
 
 ACCEPTANCE CRITERIA: Email e nou, deci user poate face register (positive)
 
-GIVEN that I insert a new email and password, WHEN I go to click the register button, THEN I`m successfully register and the credentials are save in database.
+GIVEN that I am a registered user on heroku login page, WHEN I enter correct username and email, THEN I can access the application and my data.
 
 ACCEPTANCE CRITERIA:Email e deja existent in baza de date (negative)
 GIVEN that I insert a  existing email and password, WHEN I go to click the register button, THEN the system will check email in database

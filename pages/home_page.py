@@ -5,8 +5,8 @@ from pages.base_page import BasePage
 
 class Home_page(BasePage):
     FORM_AUTHENTICATION=(By.XPATH, '//a[contains(text(), "Form Authentication")]')
-    DROP_DOWN=(By.XPATH,'//*[@id="content"]/ul/li[11]/a')
-    REDIRECT_LINK=(By.XPATH,'//*[@id="content"]/ul/li[36]/a')
+    DROP_DOWN=(By.XPATH,'//a[contains(text(),"Dropdown")]')
+    REDIRECT_LINK=(By.XPATH,'//a[contains(text(),"Redirect Link")]')
 
     def navigate_to_home_page(self):
         self.driver.get('https://the-internet.herokuapp.com/')

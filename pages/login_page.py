@@ -13,10 +13,10 @@ class Login_page(BasePage):
     LOGIN_BUTTON = (By.XPATH, '//*[@id="login"]/button/i')
     ERROR_MESSAGE=(By.XPATH, '//*[@id="flash"]')
     BTN_LOGIN=(By.XPATH, '//*[@id="login"]/button')
-    LOGIN_H2 = (By.XPATH, '//*[@id="content"]/div/h2')
-    ELEMENTAL_SELENIUM = (By.XPATH, '//*[@id="page-footer"]/div/div/a')
+    LOGIN_H2 = (By.TAG_NAME, 'h2')
+    ELEMENTAL_SELENIUM = (By.XPATH, '//a[contains(text(),"Elemental Selenium")]')
     FLASH_SUCCESS = (By.XPATH, '//*[@class="flash success"]')
-    LOGOUT=(By.XPATH,'//*[@id="content"]/div/a')
+
 
     def navigate_to_home_page(self):
         self.driver.get('https://the-internet.herokuapp.com/login')
