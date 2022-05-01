@@ -1,0 +1,21 @@
+from selenium.webdriver.common.by import By
+
+from pages.base_page import BasePage
+
+
+class Home_page(BasePage):
+    FORM_AUTHENTICATION=(By.XPATH, '//a[contains(text(), "Form Authentication")]')
+    DROP_DOWN=(By.XPATH,'//*[@id="content"]/ul/li[11]/a')
+    REDIRECT_LINK=(By.XPATH,'//*[@id="content"]/ul/li[36]/a')
+
+    def navigate_to_home_page(self):
+        self.driver.get('https://the-internet.herokuapp.com/')
+
+    def click_form_authentication(self):
+        self.driver.find_element(*self.FORM_AUTHENTICATION).click()
+
+    def click_drop_down(self):
+        self.driver.find_element(*self.DROP_DOWN).click()
+
+    def click_redirect_link(self):
+        self.driver.find_element(*self.REDIRECT_LINK).click()
